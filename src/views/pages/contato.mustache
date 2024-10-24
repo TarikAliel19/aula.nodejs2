@@ -1,0 +1,13 @@
+{{>partials/header}}
+<header>
+    <h1>Titulo do site</h1>
+</header>
+
+<section>
+    <p>Aqui é o conteúdo do site</p>
+    {{#aparecerPessoa}}
+      <p>Olá, {{nome}} seja bem vindo! </p>
+    {{/aparecerPessoa}}
+    
+</section>
+{{>partials/footer}}

@@ -1,0 +1,36 @@
+{{>partials/header}}
+<body>
+
+<section>
+    <p>Aqui é o conteúdo do site</p>
+    {{#aparecerMensagem}} 
+     <p> Opa, {{nome}} {{sobrenome}} seja bem vindo!</p>
+    {{/aparecerMensagem}} 
+    {{#mostrarIdade}} <!-- IF -->
+        <p>Você é maior de idade com {{idade}} anos</p>
+    {{/mostrarIdade}}
+    {{#produtos}}
+    <ul>
+        <li>{{titulo}} - R${{preco}}</li>
+    </ul>
+    
+    </li>
+    {{/produtos}}
+    <ul>
+    {{#frases}}
+        <li>{{.}}</li>
+    {{/frases}}
+    </ul>
+    <!-- Para não aparecer frases -->
+    {{^frases}}
+        Não temos frases motivacionais hoje
+    {{/frases}}
+
+    {{^mostrarIdade}} <!-- Else -->
+        <p>Você é menor de idade com {{idade}} anos</p>
+    {{/mostrarIdade}}
+
+
+</section> 
+</body>
+{{>partials/footer}}
